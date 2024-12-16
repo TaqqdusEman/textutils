@@ -1,10 +1,10 @@
 import Navbar from "./components/Navbar";
-import TextForm from "./components/TextForm";
-import About from "./components/About";
+//import TextForm from "./components/TextForm";
+//import About from "./components/About";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState(`light`); // Whether dark mode is enable or not
@@ -37,7 +37,17 @@ function App() {
   }; 
   return (
     <>
-      <BrowserRouter>
+    
+        <div className="container">
+        <Alert alert={alert}/>
+        <Navbar title="NAVBAR" mode={mode} toggleMode={toggleMode} />
+        </div>
+    </>
+  );
+}
+export default App;
+
+  {/* <BrowserRouter>
         <Navbar
           title="TextUtils"
           aboutText="About Us"
@@ -63,10 +73,4 @@ function App() {
             />
           </Routes>
         </div>
-      </BrowserRouter>
-    </>
-  );
-}
-export default App;
-
-
+      </BrowserRouter> */}
